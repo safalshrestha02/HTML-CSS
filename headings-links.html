@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headings, paragraphs, lists, and links</title>
+  </head>
+  <body>
+    <section>
+      <h1>HTML text fundamentals</h1>
+      <p>
+        One of HTML's main jobs is to give text structure so that a browser can
+        display an
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Glossary/HTML"
+          target="_blank"
+          >HTML</a
+        >
+        document the way its developer intends. This article explains the way
+        HTML can be used to structure a page of text by adding headings and
+        paragraphs, emphasizing words, creating lists, and more
+      </p>
+      <h2>The basics: headings and paragraphs</h2>
+      <p>
+        Most structured text consists of headings and paragraphs, whether you
+        are reading a story, a newspaper, a college textbook, a magazine, etc.
+      </p>
+      <p>
+        Structured content makes the reading experience easier and more
+        enjoyable.
+      </p>
+      <p>
+        In HTML, each paragraph has to be wrapped in a &lt;p&gt; element, like
+        so: <br />
+        <span><code>&lt;p&gt;I am a paragraph&lt;/p&gt;</code></span>
+      </p>
+      <p>
+        Each heading has to be wrapped in a heading element: <br />
+        <span><code>&lt;h1&gt;Title for something&lt;/h1&gt;</code></span>
+      </p>
+      <p>
+        There are six heading elements: h1, h2, h3, h4, h5, and h6. Each element
+        represents a different level of content in the document; &lt;h1&gt;
+        represents the main heading, &lt;h2&gt; represents subheadings,
+        &lt;h3&gt; represents sub-subheadings, and so on.
+      </p>
+      <h2>Implementing structural hierarchy</h2>
+      <p>
+        For example, in this story, the &lt;h1&gt; element represents the title
+        of the story, the &lt;h2&gt; elements represent the title of each
+        chapter, and the &lt;h3&gt; elements represent sub-sections of each
+        chapter:
+      </p>
+      <img
+        src="https://cdn.discordapp.com/attachments/1102860047312224257/1179669261954859088/image.png?ex=657a9f9d&is=65682a9d&hm=97681d7b2421a641b83e1410fe56601736349a53213dd3520e19a3af9116c298&"
+        target="_blank"
+      />
+      <p>
+        To know more about heading and paragraphs, how we should use them when
+        making a page, and why we need structuring in html please refer to this
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs"
+          target="_blank"
+          >documentation.</a
+        >
+      </p>
+    </section>
+    <section>
+      <h2>Lists</h2>
+      <p>
+        Now let's turn our attention to lists. Lists are everywhere in life—from
+        your shopping list to the list of directions you subconsciously follow
+        to get to your house every day, to the lists of instructions you are
+        following in these tutorials! Lists are everywhere on the web, too, and
+        we've got three different types to worry about.
+      </p>
+      <h3>Unordered</h3>
+      <p>
+        Unordered lists are used to mark up lists of items for which the order
+        of the items doesn't matter.
+      </p>
+      <p>
+        Every unordered list starts off with a &lt;ul&gt; element—this wraps
+        around all the list items and the last step is to wrap each list item in
+        a &lt;li&gt; (list item) element:
+      </p>
+      <code>
+        &lt;ul&gt; <br />
+        &ensp; &lt;li&gt;milk&lt;/li&gt; <br />
+        &ensp; &lt;li&gt;eggs&lt;/li&gt; <br />
+        &ensp; &lt;li&gt;bread&lt;/li&gt; <br />
+        &ensp; &lt;li&gt;hummus&lt;/li&gt; <br />
+        &lt;/ul&gt; <br />
+      </code>
+      <ul>
+        <li>milk</li>
+        <li>eggs</li>
+        <li>bread</li>
+        <li>hummus</li>
+      </ul>
+      <h3>Ordered</h3>
+      <p>
+        Ordered lists are lists in which the order of the items does matter.
+      </p>
+      <p>
+        The markup structure is the same as for unordered lists, except that you
+        have to wrap the list items in an &lt;ol&gt; element, rather than
+        &lt;ul&gt;:
+      </p>
+      <code>
+        &lt;ol&gt; <br />
+        &ensp; &lt;li&gt;Drive to the end of the road&lt;/li&gt; <br />
+        &ensp; &lt;li&gt;Turn right&lt;/li&gt; <br />
+        &ensp; &lt;li&gt;Go straight across the first two roundabouts&lt;/li&gt;
+        <br />
+        &ensp; &lt;li&gt;Turn left at the third roundabout&lt;/li&gt; <br />
+        &ensp; &lt;li&gt;The school is on your right, 300 meters up the
+        road&lt;/li&gt; <br />
+        &lt;/ol&gt; <br />
+      </code>
+      <ol>
+        <li>Drive to the end of the road</li>
+        <li>Turn right</li>
+        <li>Go straight across the first two roundabouts</li>
+        <li>Turn left at the third roundabout</li>
+        <li>The school is on your right, 300 meters up the road</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Creating hyperlinks</h2>
+      <p>
+        Hyperlinks are one of the most exciting innovations the Web has to
+        offer. They've been a feature of the Web since the beginning, and are
+        what makes the Web a web. Hyperlinks allow us to link documents to other
+        documents or resources, link to specific parts of documents, or make
+        apps available at a web address. Almost any web content can be converted
+        to a link so that when clicked or otherwise activated the web browser
+        goes to another web address (URL).
+      </p>
+      <h3>Anatomy of a link</h3>
+      <p>
+        A basic link is created by wrapping the text or other content inside an
+        &lt;a&gt; element and using the <code>href</code> attribute, also known
+        as a Hypertext Reference, or target, that contains the web address.
+      </p>
+      <code>
+        &lt;p&gt; <br />
+        &ensp;I'm creating a link to &lt;a
+        href="https://developer.mozilla.org/en-US/"&gt;MDN web docs&lt;/a&gt;.
+        <br />
+        &lt;/p&gt;
+      </code>
+      <p>
+        I'm creating a link to
+        <a href="https://developer.mozilla.org/en-US/" target="_blank"
+          >MDN web docs</a
+        >.
+      </p>
+      <h3>Absolute versus relative URLs</h3>
+      <p>
+        Two terms you'll come across on the Web are absolute URL and relative
+        URL:
+      </p>
+      <p>
+        <b>Absolute URL:</b> Points to a location defined by its absolute
+        location on the web, including protocol and domain name. For example, if
+        an <code>index.html</code> page is uploaded to a directory called
+        projects that sits inside the root of a web server, and the website's
+        domain is <code>https://www.example.com</code>, the page would be
+        available at
+        <code>https://www.example.com/projects/index.html</code> (or even just
+        <code>https://www.example.com/projects/</code>, as most web servers just
+        look for a landing page such as <code>index.html</code> to load if it
+        isn't specified in the URL.)
+      </p>
+      <p>
+        An absolute URL will always point to the same location, no matter where
+        it's used.
+      </p>
+      <p>
+        <b>Relative URL:</b> Points to a location that is relative to the file
+        you are linking from, more like what we looked at in the previous
+        section. For example, if we wanted to link from our example file at
+        <code>https://www.example.com/projects/index.html</code> to a PDF file
+        in the same directory, the URL would just be the filename —
+        <code>project-brief.pdf</code> — no extra information needed. If the PDF
+        was available in a subdirectory inside projects called pdfs, the
+        relative link would be <code>pdfs/project-brief.pdf</code> (the
+        equivalent absolute URL would be
+        <code>https://www.example.com/projects/pdfs/project-brief.pdf</code>.)
+      </p>
+      <p>
+        A relative URL will point to different places depending on the actual
+        location of the file you refer from — for example if we moved our
+        <code>index.html</code> file out of the projects directory and into the
+        root of the website (the top level, not in any directories), the
+        <code>pdfs/project-brief.pdf</code> relative URL link inside it would
+        now point to a file located at
+        <code>https://www.example.com/pdfs/project-brief.pdf</code>, not a file
+        located at
+        <code>https://www.example.com/projects/pdfs/project-brief.pdf</code>.
+      </p>
+      <p>
+        Of course, the location of the <code>project-brief.pdf</code> file and
+        pdfs folder won't suddenly change because you moved the
+        <code>index.html</code> file — this would make your link point to the
+        wrong place, so it wouldn't work if clicked on. You need to be careful!
+      </p>
+      <p>
+        To know more about hyperlinks and best practices for hyperlinks please
+        refer to this
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          target="_blank"
+          >documentation.</a
+        >
+      </p>
+    </section>
+  </body>
+</html>
