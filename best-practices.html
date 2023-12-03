@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Best practices for structuring content</title>
+  </head>
+  <body>
+    <h1>Best practices for structuring content</h1>
+    <section>
+      <h2>Use only one &lt;h1&gt; element for one code sheet</h2>
+      <p>
+        There are six different heading tags in HTML, &lt;h1&gt; to &lt;h6&gt;.
+        The &lt;h1&gt; tag is the main heading (subject of the web page) while
+        the &lt;h6&gt; tag is the least important heading. The &lt;h1&gt; tag is
+        bigger than the &lt;h2&gt; tag, the &lt;h2&gt; tag is bigger than the
+        &lt;h3&gt;tag, all the way down to the &lt;h6&gt; tag. Each of the
+        headings decreases in size according to its importance. It is important
+        to avoid using more than one &lt;h1&gt; element for one code sheet.
+      </p>
+      <h3>Dont do this</h3>
+      <code>
+        &lt;main&gt; <br />&lt;div&gt;<br />
+        &lt;h1&gt;Can Coding be fun?&lt;/h1&gt;<br />
+        &lt;p&gt;The more you code the better you become&lt;/p&gt; <br />
+        &lt;/div&gt; <br />
+        &lt;div&gt; <br />
+        &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
+        &lt;p&gt;It is always better when you have fun coding&lt;/p&gt; <br />
+        &lt;/div&gt; <br />
+        &lt;/main&gt;
+      </code>
+      <p>
+        In the above example, we used the &lt;h1&gt; tag on the first and second
+        &lt;div&gt;. Coding this way will work, but although you will achieve
+        the same goal, this is not the best practice.
+      </p>
+      <h3>Do this instead</h3>
+      <code>
+        &lt;main&gt; <br />&lt;div&gt;<br />
+        &lt;h1&gt;Can Coding be fun?&lt;/h1&gt;<br />
+        &lt;p&gt;The more you code the better you become&lt;/p&gt; <br />
+        &lt;/div&gt; <br />
+        &lt;div&gt; <br />
+        &lt;h2&gt;Coding is fun&lt;/h2&gt; <br />
+        &lt;p&gt;It is always better when you have fun coding&lt;/p&gt; <br />
+        &lt;/div&gt; <br />
+        &lt;/main&gt;
+      </code>
+      <p>
+        Having only one &lt;h1&gt; element on a web page is vital for Search
+        Engine Optimization (SEO). It helps search engines understand what a web
+        page is all about (the main idea of a web page).
+      </p>
+    </section>
+    <section>
+      <h2>Do not skip heading levels in HTML</h2>
+      <p>
+        When using the header tags, it's vital to proceed from &lt;h1&gt; to
+        &lt;h2&gt; to &lt;h3&gt; to &lt;h4&gt; and so on... Don't use &lt;h1&gt;
+        and then jump to &lt;h3&gt; when using header tags. It's difficult for
+        web visitors using a screen reader to understand the contents of your
+        web page when you skip heading levels.
+      </p>
+      <p>
+        A screen reader is a technology that helps people who have difficulty
+        seeing access and interact with digital content, like websites or
+        applications via audio or touch. The main users of screen readers are
+        people who are blind or have very limited vision.
+      </p>
+      <h3>Dont do this</h3>
+      <code>
+        &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
+        &lt;h3&gt;It is always better when you have fun coding&lt;/h3&gt; <br />
+        &lt;h5&gt;Consistency is Key&lt;/h5&gt;
+      </code>
+      <h3>Do this instead</h3>
+      <code>
+        &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
+        &lt;h2&gt;It is always better when you have fun coding&lt;/h2&gt; <br />
+        &lt;h3&gt;Consistency is Key&lt;/h3&gt;
+      </code>
+    </section>
+  </body>
+</html>
