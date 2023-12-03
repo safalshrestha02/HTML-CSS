@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="introduction.html">Introduction to HTML</a></li>
+        <li>
+          <a href="semantic.html">Document structure, tags, and semantics</a>
+        </li>
+        <li>
+          <a href="headings-links.html"
+            >Headings, paragraphs, lists, and links</a
+          >
+        </li>
+        <li><a href="multimedia.html">Multimedia (images, audio, video)</a></li>
+        <li><a href="forms.html">Forms and input elements & attributes</a></li>
+      </ul>
+    </nav>
+    <h1>Forms and input elements & attributes</h1>
+    <section>
+      <p>
+        The &lt;form&gt;> HTML element represents a document section containing
+        interactive controls for submitting information.
+      </p>
+      <h2>Attributes for the Form element</h2>
+      <ul>
+        <li>
+          accept-charset: Space-separated character encodings the server
+          accepts. The browser uses them in the order in which they are listed.
+          The default value means the same encoding as the page. (In previous
+          versions of HTML, character encodings could also be delimited by
+          commas.)
+        </li>
+        <li>
+          autocomplete: Indicates whether input elements can by default have
+          their values automatically completed by the browser. autocomplete
+          attributes on form elements override it on &lt;form&gt;. Possible
+          values:
+          <ul>
+            <li>
+              off: The browser may not automatically complete entries. (Browsers
+              tend to ignore this for suspected login forms; see The
+              autocomplete attribute and login fields.)
+            </li>
+            <li>on: The browser may automatically complete entries.</li>
+          </ul>
+        </li>
+        <li>
+          name: The name of the form. The value must not be the empty string,
+          and must be unique among the form elements in the forms collection
+          that it is in, if any.
+        </li>
+        <li>
+          rel: Controls the annotations and what kinds of links the form
+          creates. Annotations include external, nofollow, opener, noopener, and
+          noreferrer. Link types include help, prev, next, search, and license.
+          The rel value is a space-separated list of these enumerated values.
+        </li>
+      </ul>
+      <h3>Attributes for form submission</h3>
+      <p>
+        The following are few of the attributes that control behavior during
+        form submission. you can find all the attributes and how to use them in
+        this
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#name"
+          target="_blank"
+          >link</a
+        >
+      </p>
+      <ul>
+        <li>
+          action: The URL that processes the form submission. This value can be
+          overridden by a formaction attribute on a &lt;button&gt;, &lt;input
+          type="submit"&gt;, or &lt;input type="image"&gt; element. This
+          attribute is ignored when method="dialog" is set.
+        </li>
+        <li>
+          method: The HTTP method to submit the form with. The only allowed
+          methods/values are (case insensitive):
+          <ul>
+            <li>post: The POST method; form data sent as the request body.</li>
+            <li>
+              get (default): The GET; form data appended to the action URL with
+              a ? separator. Use this method when the form has no side effects.
+            </li>
+            <li>
+              dialog: When the form is inside a &lt;dialog&gt;, closes the
+              dialog and causes a submit event to be fired on submission,
+              without submitting data or clearing the form.
+            </li>
+          </ul>
+        </li>
+        <p>
+          This value is overridden by formmethod attributes on &lt;button&gt;,
+          &lt;input type="submit"&gt;, or &lt;input type="image"&gt; elements.
+        </p>
+      </ul>
+      <h2>The HTML &lt;form&gt; Elements</h2>
+      <p>
+        The HTML &lt;form&gt; element can contain one or more of the following
+        form elements. I'm going to list out few of them with examples. You can
+        learn about all the form elements from this
+        <a
+          href="https://www.w3schools.com/html/html_form_elements.asp"
+          target="_blank"
+        >
+          link.
+        </a>
+      </p>
+      <ul>
+        <li>&lt;input&gt;</li>
+        <p>
+          One of the most used form elements is the &lt;input&gt; element. The
+          &lt;input&gt; element can be displayed in several ways, depending on
+          the type attribute.
+        </p>
+        <p>
+          <code>
+            &lt;label for="fname"&gt;First name:&lt;/label&gt; <br />
+            &lt;input type="text" id="fname" name="fname" /&gt;
+          </code>
+          <br />
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname" />
+        </p>
+        <li>&lt;label&gt;</li>
+        <p>
+          The &lt;label&gt; element defines a label for several form elements.
+          The &lt;label&gt; element is useful for screen-reader users, because
+          the screen-reader will read out loud the label when the user focus on
+          the input element. The &lt;label&gt; element also help users who have
+          difficulty clicking on very small regions (such as radio buttons or
+          checkboxes) - because when the user clicks the text within the
+          &lt;label&gt; element, it toggles the radio button/checkbox. The for
+          attribute of the &lt;label&gt; tag should be equal to the id attribute
+          of the &lt;input&gt; element to bind them together.
+        </p>
+        <li>&lt;select&gt;</li>
+        <p>The &lt;select&gt; element defines a drop-down list:</p>
+        <code>
+          &lt;label for="cars"&gt;Choose a car:&lt;/label&gt; <br />
+          &lt;select id="cars" name="cars"&gt; <br />
+          &lt;option value="volvo"&gt;&lt;/option&gt; <br />
+          &lt;option value="saab"&gt;Saab&lt;/option&gt; <br />
+          &lt;option value="fiat"&gt;Fiat&lt;/option&gt; <br />
+          &lt;option value="audi"&gt;Audi&lt;/option&gt; <br />
+          &lt;/select&gt;
+        </code>
+        <br />
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <p>
+          The &lt;option&gt; element defines an option that can be selected. By
+          default, the first item in the drop-down list is selected. To define a
+          pre-selected option, add the selected attribute to the option:
+        </p>
+        <code>&lt;option value="fiat" selected&gt;Fiat&lt;/option&gt;</code>
+        <br />
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat" selected>Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <li>&lt;textarea&gt;</li>
+        <p>
+          The &lt;textarea&gt; element defines a multi-line input field (a text
+          area):
+        </p>
+        <code>
+          &lt;textarea name="message" rows="10" cols="30"&gt; <br />
+          The cat was playing in the garden. <br />&lt;/textarea &gt; <br />
+        </code>
+        <textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+            </textarea
+        >
+        <p>
+          The rows attribute specifies the visible number of lines in a text
+          area. The cols attribute specifies the visible width of a text area.
+          You can also define the size of the text area by using CSS:
+        </p>
+        <code>
+          &lt;textarea name="message" style="width:200px; height:600px;"&gt;<br />
+          The cat was playing in the garden. <br />
+          &lt;/textarea&gt;<br />
+        </code>
+        <li>&lt;button&gt;</li>
+        <p>
+          The &lt;button&gt; element defines a clickable button. Note: Always
+          specify the type attribute for the button element. Different browsers
+          may use different default types for the button element.
+        </p>
+        <code>
+          &lt;button type="button" onclick="alert('Hello World!')"&gt;Click
+          Me!&lt;/button&gt;
+        </code>
+        <br />
+        <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+      </ul>
+    </section>
+
+    <section>
+      <h2>HTML input types</h2>
+      <p>
+        Here area few of the HTML input types. Tip: The default value of the
+        type attribute is "text".
+      </p>
+      <ul>
+        <li>&lt;input type="text"&gt;</li>
+        <p>
+          <code>
+            &lt;form&gt; &lt;label for="fname"&gt;First name:&lt;/label&gt;<br />
+            &lt;input type="text" id="fname" name="fname" /&gt;<br />
+            &lt;label for="lname"&gt;Last name:&lt;/label&gt;<br />
+            &lt;input type="text" id="lname" name="lname" /&gt; <br />
+            &lt;/form &gt;
+          </code>
+          <br />
+        </p>
+        <form>
+          <label for="fname">First name:</label><br />
+          <input type="text" id="fname" name="fname" /><br />
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="lname" name="lname" />
+        </form>
+        <li>&lt;input type="button"&gt;</li>
+        <code>
+          &lt;input type="button" onclick="alert('Hello World!')" value="Click
+          Me!"&gt;
+        </code>
+        <br />
+        <input
+          type="button"
+          onclick="alert('Hello World!')"
+          value="Click Me!"
+        />
+        <li>&lt;input type="checkbox"&gt;</li>
+        <code>
+          &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"
+          /&gt;<br />
+          &lt;label for="vehicle1"&gt; I have a bike&lt;/label&gt;<br />
+          &lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"
+          /&gt; <br />
+          &lt;label for="vehicle2"&gt; I have a car&lt;/label&gt;<br />
+        </code>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <label for="vehicle1"> I have a bike</label
+        ><br />
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+        <label for="vehicle2"> I have a car</label
+        ><br />
+        <li>&lt;input type="datetime-local"&gt;</li>
+        <code>
+          &lt;label for="birthdaytime">Birthday (date and time):&lt;/label&gt;
+          <br />
+          &lt;input type="datetime-local" id="birthdaytime" name="birthdaytime"
+          /&gt;
+        </code>
+        <br />
+        <label for="birthdaytime">Birthday (date and time):</label>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime" />
+        <li>&lt;input type="email"&gt;</li>
+        <code>
+          &lt;label for="email">Enter your email:&lt;/label&gt; <br />
+          &lt;input type="email" id="email" name="email" /&gt;
+        </code>
+        <br />
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" />
+        <li>&lt;input type="file"&gt;</li>
+        <code>
+          &lt;label for="myfile"&gt;Select a file:&lt;/label&gt; <br />
+          &lt;input type="file" id="myfile" name="myfile" /&gt;
+        </code>
+        <br />
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile" />
+      </ul>
+      <p>
+        To know more about the input types please check
+        <a
+          href="https://www.w3schools.com/html/html_form_input_types.asp"
+          target="_blank"
+          >link
+        </a>
+      </p>
+    </section>
+    <section>
+      <h2>HTML input attributes</h2>
+      <h3>The value Attribute</h3>
+      <p>
+        The input value attribute specifies an initial value for an input field:
+        <code>
+          &lt;form> &lt;label for="fname"&gt;First name:&lt;/label&gt;<br />
+          &lt;input type="text" id="fname" name="fname" value="John"&gt;<br />
+          &lt;label for="lname"&gt;Last name:&lt;/label&gt;<br />
+          &lt;input type="text" id="lname" name="lname" value="Doe"&gt;
+          &lt;/form&gt;
+        </code>
+        <br />
+      </p>
+      <form>
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" name="fname" value="John" /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" value="Doe" />
+      </form>
+      <h3>The readonly Attribute</h3>
+      <p>
+        The input readonly attribute specifies that an input field is read-only.
+        A read-only input field cannot be modified (however, a user can tab to
+        it, highlight it, and copy the text from it). The value of a read-only
+        input field will be sent when submitting the form!
+        <code>
+          &lt;form> &lt;label for="fname"&gt;First name:&lt;/label&gt;<br />
+          &lt;input type="text" id="fname" name="fname" value="John"
+          readonly&gt;<br />
+          &lt;label for="lname"&gt;Last name:&lt;/label&gt;<br />
+          &lt;input type="text" id="lname" name="lname" value="Doe"&gt;
+          &lt;/form&gt;
+        </code>
+        <br />
+      </p>
+      <form>
+        <label for="fname">First name:</label><br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          value="John"
+          readonly
+        /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" value="Doe" />
+      </form>
+      <p>
+        You can learn more about input attributes from this
+        <a
+          href="https://www.w3schools.com/html/html_form_attributes.asp"
+          target="_blank"
+          >link.</a
+        >
+      </p>
+    </section>
+    <section>
+      <h2>HTML Input form Attributes</h2>
+      <h3>The form Attribute</h3>
+      <p>
+        The input form attribute specifies the form the &lt;input&gt; element
+        belongs to. The value of this attribute must be equal to the id
+        attribute of the &lt;form&gt; element it belongs to.u
+      </p>
+      <h3>The formaction Attribute</h3>
+      <p>
+        The input formaction attribute specifies the URL of the file that will
+        process the input when the form is submitted. Note: This attribute
+        overrides the action attribute of the &lt;form&gt; element. The
+        formaction attribute works with the following input types: submit and
+        image.
+      </p>
+      <code>
+        &lt;form action="/action_page.php"&gt; <br />
+        &lt;label for="fname"&gt;First name:&lt;/label&gt; <br />
+        &lt;input type="text" id="fname" name="fname" /&gt;<br />
+        &lt;label for="lname"&gt;Last name:&lt;/label&gt; &lt;input type="text"
+        id="lname" name="lname" /&gt;<br />
+        &lt;input type="submit" value="Submit" /&gt; <br />
+        &lt;input type="submit" formaction="/action_page2.php" value="Submit as
+        Admin" /&gt; <br />&lt;/form&gt;
+      </code>
+      <br />
+      <form action="introduction.html">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <input type="submit" value="Submit" />
+        <input
+          type="submit"
+          formaction="semantic.html"
+          value="Submit as Admin"
+        />
+      </form>
+      <p>
+        To learn more about forms please follow this
+        <a
+          href="https://www.w3schools.com/html/html_form_attributes_form.asp"
+          target="_blank"
+          >link.
+        </a>
+      </p>
+    </section>
+  </body>
+</html>

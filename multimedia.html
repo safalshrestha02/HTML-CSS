@@ -6,6 +6,21 @@
     <title>Multimedia</title>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="introduction.html">Introduction to HTML</a></li>
+        <li>
+          <a href="semantic.html">Document structure, tags, and semantics</a>
+        </li>
+        <li>
+          <a href="headings-links.html"
+            >Headings, paragraphs, lists, and links</a
+          >
+        </li>
+        <li><a href="multimedia.html">Multimedia (images, audio, video)</a></li>
+        <li><a href="forms.html">Forms and input elements & attributes</a></li>
+      </ul>
+    </nav>
     <h1>HTML Multimedia</h1>
     <section>
       <p>
@@ -120,6 +135,32 @@
         src="https://www.youtube.com/embed/dQw4w9WgXcQ"
         title="youtube video"
       ></iframe>
+    </section>
+
+    <section>
+      <h2>HTML Audio</h2>
+      <p>
+        The HTML &lt;audio&gt; element is used to play an audio file on a web
+        page.
+      </p>
+      <code>
+        &lt;audio controls&gt; <br />
+        &ensp;&lt;source src="horse.ogg" type="audio/ogg"&gt; <br />
+        &ensp;&lt;source src="horse.mp3" type="audio/mpeg"&gt; <br />Your
+        browser does not support the audio element. <br />
+        &lt;/audio&gt; <br />
+      </code>
+      <audio controls autoplay>
+        <source
+          src="https://pixabay.com/music/upbeat-drive-breakbeat-173062/"
+          type="audio/ogg"
+        />
+        <source
+          src="https://pixabay.com/music/upbeat-drive-breakbeat-173062/"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
     </section>
   </body>
 </html>
