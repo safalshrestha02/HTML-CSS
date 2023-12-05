@@ -3,223 +3,236 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/accessibility.css" />
     <title>Writing semantic HTML and accessibility best practices</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="introduction.html">Introduction to HTML</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
         <li>
-          <a href="semantic.html">Document structure, tags, and semantics</a>
+          <a href="semantic.html">Document structure</a>
         </li>
         <li>
-          <a href="headings-links.html">
-            Headings, paragraphs, lists, and links
-          </a>
+          <a href="headings-links.html"> HTML text fundamentals </a>
         </li>
-        <li><a href="multimedia.html">Multimedia (images, audio, video)</a></li>
-        <li><a href="forms.html">Forms and input elements & attributes</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="forms.html">Forms</a></li>
         <li>
-          <a href="aria.html">ARIA roles and attributes for accessibility</a>
+          <a href="aria.html">ARIA</a>
         </li>
         <li>
-          <a href="accessibility.html">
-            Writing semantic HTML and accessibility best practices
-          </a>
+          <a href="accessibility.html"> Accessibility </a>
         </li>
         <li>
-          <a href="best-practices.html">
-            Best practices for structuring content
-          </a>
+          <a href="best-practices.html"> HTML best practices </a>
         </li>
       </ul>
     </nav>
-    <h1>Writing semantic HTML and accessibility best practices</h1>
-    <section>
-      <h2>HTML: A good basis for accessibility</h2>
-      <p>
-        A great deal of web content can be made accessible just by making sure
-        the correct Hypertext Markup Language elements are used for the correct
-        purpose at all times. This article looks in detail at how HTML can be
-        used to ensure maximum accessibility.
-      </p>
-      <h3>HTML and accessibility</h3>
-      <p>
-        As you learn more about HTML — read more resources, look at more
-        examples, etc. — you'll keep seeing a common theme: the importance of
-        using semantic HTML (sometimes called POSH, or Plain Old Semantic HTML).
-        This means using the correct HTML elements for their intended purpose as
-        much as possible.
-      </p>
-      <p>
-        You might wonder why this is so important. After all, you can use a
-        combination of CSS and JavaScript to make just about any HTML element
-        behave in whatever way you want. For example, a control button to play a
-        video on your site could be marked up like this:
-      </p>
-      <code> &lt;div&gt;Play video&lt;/div&gt; </code>
-      <p>
-        But as you'll see in greater detail later on, it makes sense to use the
-        correct element for the job:
-      </p>
-      <code> &lt;button&gt;Play video&lt;/button&gt; </code>
-      <p>
-        Not only do HTML &lt;button&gt;s have some suitable styling applied by
-        default (which you will probably want to override), they also have
-        built-in keyboard accessibility — users can navigate between buttons
-        using the Tab key and activate their selection using Space, Return or
-        Enter.
-      </p>
-      <p>
-        Semantic HTML doesn't take any longer to write than non-semantic (bad)
-        markup if you do it consistently from the start of your project. Even
-        better, semantic markup has other benefits beyond accessibility:
-      </p>
-      <ul>
-        <li>
-          Easier to develop with — as mentioned above, you get some
-          functionality for free, plus it is arguably easier to understand.
-        </li>
-        <li>
-          Better on mobile — semantic HTML is arguably lighter in file size than
-          non-semantic spaghetti code, and easier to make responsive.
-        </li>
-        <li>
-          Good for SEO — search engines give more importance to keywords inside
-          headings, links, etc. than keywords included in non-semantic
-          &lt;div&gt;s, etc., so your documents will be more findable by
-          customers.
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2>Good semantics</h2>
-      <p>
-        We've already talked about the importance of proper semantics, and why
-        we should use the right HTML element for the job. This cannot be
-        ignored, as it is one of the main places that accessibility is badly
-        broken if not handled properly.
-      </p>
-      <p>
-        Out there on the web, the truth is that people do some very strange
-        things with HTML markup. Some abuses of HTML are due to legacy practices
-        that have not been completely forgotten, and some are just plain
-        ignorance. Whatever the case, you should replace such bad code.
-      </p>
-      <p>
-        Sometimes you are not in the position to get rid of lousy markup — your
-        pages might be generated by some kind of server-side framework over
-        which you don't have full control, or you might have third party content
-        on your page (such as ad banners) over which you have no control. The
-        goal isn't "all or nothing"; every improvement you can make will help
-        the cause of accessibility.
-      </p>
-      <h3>Text content</h3>
-      <p>
-        One of the best accessibility aids a screen reader user can have is an
-        excellent content structure with headings, paragraphs, lists, etc. An
-        excellent semantic example might look something like the following:
-      </p>
-      <code>
-        &lt;h1&gt; My heading&lt;/h1&gt; <br />
+    <div class="container">
+      <h1 class="main-heading">
+        Writing semantic HTML and accessibility best practices
+      </h1>
+      <section>
+        <h2>HTML: A good basis for accessibility</h2>
+        <p>
+          A great deal of web content can be made accessible just by making sure
+          the correct Hypertext Markup Language elements are used for the
+          correct purpose at all times. This article looks in detail at how HTML
+          can be used to ensure maximum accessibility.
+        </p>
+        <h3>HTML and accessibility</h3>
+        <p>
+          As you learn more about HTML — read more resources, look at more
+          examples, etc. — you'll keep seeing a common theme: the importance of
+          using semantic HTML (sometimes called POSH, or Plain Old Semantic
+          HTML). This means using the correct HTML elements for their intended
+          purpose as much as possible.
+        </p>
+        <p>
+          You might wonder why this is so important. After all, you can use a
+          combination of CSS and JavaScript to make just about any HTML element
+          behave in whatever way you want. For example, a control button to play
+          a video on your site could be marked up like this:
+        </p>
+        <div class="code">
+          <div class="code-base">
+            <code> &lt;div&gt;Play video&lt;/div&gt; </code>
+          </div>
+        </div>
+        <p>
+          But as you'll see in greater detail later on, it makes sense to use
+          the correct element for the job:
+        </p>
+        <div class="code">
+          <div class="code-base">
+            <code> &lt;button&gt;Play video&lt;/button&gt; </code>
+          </div>
+        </div>
+        <p>
+          Not only do HTML &lt;button&gt;s have some suitable styling applied by
+          default (which you will probably want to override), they also have
+          built-in keyboard accessibility — users can navigate between buttons
+          using the Tab key and activate their selection using Space, Return or
+          Enter.
+        </p>
+        <p>
+          Semantic HTML doesn't take any longer to write than non-semantic (bad)
+          markup if you do it consistently from the start of your project. Even
+          better, semantic markup has other benefits beyond accessibility:
+        </p>
+        <ul>
+          <li>
+            Easier to develop with — as mentioned above, you get some
+            functionality for free, plus it is arguably easier to understand.
+          </li>
+          <li>
+            Better on mobile — semantic HTML is arguably lighter in file size
+            than non-semantic spaghetti code, and easier to make responsive.
+          </li>
+          <li>
+            Good for SEO — search engines give more importance to keywords
+            inside headings, links, etc. than keywords included in non-semantic
+            &lt;div&gt;s, etc., so your documents will be more findable by
+            customers.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Good semantics</h2>
+        <p>
+          We've already talked about the importance of proper semantics, and why
+          we should use the right HTML element for the job. This cannot be
+          ignored, as it is one of the main places that accessibility is badly
+          broken if not handled properly.
+        </p>
+        <p>
+          Out there on the web, the truth is that people do some very strange
+          things with HTML markup. Some abuses of HTML are due to legacy
+          practices that have not been completely forgotten, and some are just
+          plain ignorance. Whatever the case, you should replace such bad code.
+        </p>
+        <p>
+          Sometimes you are not in the position to get rid of lousy markup —
+          your pages might be generated by some kind of server-side framework
+          over which you don't have full control, or you might have third party
+          content on your page (such as ad banners) over which you have no
+          control. The goal isn't "all or nothing"; every improvement you can
+          make will help the cause of accessibility.
+        </p>
+        <h3>Text content</h3>
+        <p>
+          One of the best accessibility aids a screen reader user can have is an
+          excellent content structure with headings, paragraphs, lists, etc. An
+          excellent semantic example might look something like the following:
+        </p>
+        <div class="code-base">
+          <code>
+            &lt;h1&gt; My heading&lt;/h1&gt; <br />
 
-        &lt;p&gt; This is the first section of my document.&lt;/p&gt; <br />
+            &lt;p&gt; This is the first section of my document.&lt;/p&gt; <br />
 
-        &lt;p&gt; I'll add another paragraph here too.&lt;/p&gt; <br />
+            &lt;p&gt; I'll add another paragraph here too.&lt;/p&gt; <br />
 
-        &lt;ol&gt; <br />
-        &lt;li&gt; Here is&lt;/li&gt; <br />
-        &lt;li&gt; a list for&lt;/li&gt; <br />
-        &lt;li&gt; you to read&lt;/li&gt; <br />
-        &lt;/ol&gt; <br />
+            &lt;ol&gt; <br />
+            &lt;li&gt; Here is&lt;/li&gt; <br />
+            &lt;li&gt; a list for&lt;/li&gt; <br />
+            &lt;li&gt; you to read&lt;/li&gt; <br />
+            &lt;/ol&gt; <br />
 
-        &lt;h2&gt; My subheading&lt;/h2&gt; <br />
+            &lt;h2&gt; My subheading&lt;/h2&gt; <br />
 
-        &lt;p&gt; <br />
-        This is the first subsection of my document. I'd love people to be able
-        to find this content! &lt;/p&gt; <br />
+            &lt;p&gt; <br />
+            This is the first subsection of my document. I'd love people to be
+            able to find this content! &lt;/p&gt; <br />
 
-        &lt;h2&gt; My 2nd subheading&lt;/h2&gt; <br />
+            &lt;h2&gt; My 2nd subheading&lt;/h2&gt; <br />
 
-        &lt;p&gt; <br />
-        This is the second subsection of my content, which I think is more
-        interesting than the last one. &lt;/p&gt; <br />
-      </code>
-      <h1>My heading</h1>
+            &lt;p&gt; <br />
+            This is the second subsection of my content, which I think is more
+            interesting than the last one. &lt;/p&gt; <br />
+          </code>
+        </div>
+        <div class="code">
+          <div class="code-example">
+            <h1>My heading</h1>
 
-      <p>This is the first section of my document.</p>
+            <p>This is the first section of my document.</p>
 
-      <p>I'll add another paragraph here too.</p>
+            <p>I'll add another paragraph here too.</p>
 
-      <ol>
-        <li>Here is</li>
-        <li>a list for</li>
-        <li>you to read</li>
-      </ol>
+            <ol>
+              <li>Here is</li>
+              <li>a list for</li>
+              <li>you to read</li>
+            </ol>
 
-      <h2>My subheading</h2>
+            <h2>My subheading</h2>
 
-      <p>
-        This is the first subsection of my document. I'd love people to be able
-        to find this content!
-      </p>
+            <p>
+              This is the first subsection of my document. I'd love people to be
+              able to find this content!
+            </p>
 
-      <h2>My 2nd subheading</h2>
+            <h2>My 2nd subheading</h2>
 
-      <p>
-        This is the second subsection of my content, which I think is more
-        interesting than the last one.
-      </p>
+            <p>
+              This is the second subsection of my content, which I think is more
+              interesting than the last one.
+            </p>
+          </div>
+        </div>
 
-      <h3>Using clear language</h3>
-      <p>
-        The language you use can also affect accessibility. In general, you
-        should use clear language that is not overly complex and doesn't use
-        unnecessary jargon or slang terms. This not only benefits people with
-        cognitive or other disabilities; it benefits readers for whom the text
-        is not written in their first language, younger people…, everyone, in
-        fact! Apart from this, you should try to avoid using language and
-        characters that don't get read out clearly by the screen reader. For
-        example:
-      </p>
-      <ul>
-        <li>
-          Don't use dashes if you can avoid it. Instead of writing 5–7, write 5
-          to 7.
-        </li>
-        <li>Expand abbreviations — instead of writing Jan, write January.</li>
-        <li>
-          Expand acronyms, at least once or twice, then use the &lt;abbr&gt; tag
-          to describe them.
-        </li>
-      </ul>
+        <h3>Using clear language</h3>
+        <p>
+          The language you use can also affect accessibility. In general, you
+          should use clear language that is not overly complex and doesn't use
+          unnecessary jargon or slang terms. This not only benefits people with
+          cognitive or other disabilities; it benefits readers for whom the text
+          is not written in their first language, younger people…, everyone, in
+          fact! Apart from this, you should try to avoid using language and
+          characters that don't get read out clearly by the screen reader. For
+          example:
+        </p>
+        <ul>
+          <li>
+            Don't use dashes if you can avoid it. Instead of writing 5–7, write
+            5 to 7.
+          </li>
+          <li>Expand abbreviations — instead of writing Jan, write January.</li>
+          <li>
+            Expand acronyms, at least once or twice, then use the &lt;abbr&gt;
+            tag to describe them.
+          </li>
+        </ul>
 
-      <h3>Page layouts</h3>
-      <p>
-        In the bad old days, people used to create page layouts using HTML
-        tables — using different table cells to contain the header, footer,
-        sidebar, main content column, etc. This is not a good idea because a
-        screen reader will likely give out confusing readouts, especially if the
-        layout is complex and has many nested tables.
-      </p>
+        <h3>Page layouts</h3>
+        <p>
+          In the bad old days, people used to create page layouts using HTML
+          tables — using different table cells to contain the header, footer,
+          sidebar, main content column, etc. This is not a good idea because a
+          screen reader will likely give out confusing readouts, especially if
+          the layout is complex and has many nested tables.
+        </p>
 
-      <h3>UI controls</h3>
-      <p>
-        By UI controls, we mean the main parts of web documents that users
-        interact with — most commonly buttons, links, and form controls. In this
-        section, we'll look at the basic accessibility concerns to be aware of
-        when creating such controls. Later articles on WAI-ARIA and multimedia
-        will look at other aspects of UI accessibility.
-      </p>
-      <p>
-        Go through this
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML"
-          target="_blank"
-          >documentation
-        </a>
-        on the best practices on semantics and accessibility
-      </p>
-    </section>
+        <h3>UI controls</h3>
+        <p>
+          By UI controls, we mean the main parts of web documents that users
+          interact with — most commonly buttons, links, and form controls. In
+          this section, we'll look at the basic accessibility concerns to be
+          aware of when creating such controls. Later articles on WAI-ARIA and
+          multimedia will look at other aspects of UI accessibility.
+        </p>
+        <p>
+          Go through this
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML"
+            target="_blank"
+            >documentation
+          </a>
+          on the best practices on semantics and accessibility
+        </p>
+      </section>
+    </div>
   </body>
 </html>

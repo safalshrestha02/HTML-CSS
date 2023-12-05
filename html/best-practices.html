@@ -3,348 +3,405 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/best-practices.css" />
     <title>Best practices for structuring content</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="introduction.html">Introduction to HTML</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
         <li>
-          <a href="semantic.html">Document structure, tags, and semantics</a>
+          <a href="semantic.html">Document structure</a>
         </li>
         <li>
-          <a href="headings-links.html">
-            Headings, paragraphs, lists, and links
-          </a>
+          <a href="headings-links.html"> HTML text fundamentals </a>
         </li>
-        <li><a href="multimedia.html">Multimedia (images, audio, video)</a></li>
-        <li><a href="forms.html">Forms and input elements & attributes</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="forms.html">Forms</a></li>
         <li>
-          <a href="aria.html">ARIA roles and attributes for accessibility</a>
+          <a href="aria.html">ARIA</a>
         </li>
         <li>
-          <a href="accessibility.html">
-            Writing semantic HTML and accessibility best practices
-          </a>
+          <a href="accessibility.html"> Accessibility </a>
         </li>
         <li>
-          <a href="best-practices.html">
-            Best practices for structuring content
-          </a>
+          <a href="best-practices.html"> HTML best practices </a>
         </li>
       </ul>
     </nav>
-    <h1>Best practices for structuring content</h1>
-    <section>
-      <h2>Use only one &lt;h1&gt; element for one code sheet</h2>
-      <p>
-        There are six different heading tags in HTML, &lt;h1&gt; to &lt;h6&gt;.
-        The &lt;h1&gt; tag is the main heading (subject of the web page) while
-        the &lt;h6&gt; tag is the least important heading. The &lt;h1&gt; tag is
-        bigger than the &lt;h2&gt; tag, the &lt;h2&gt; tag is bigger than the
-        &lt;h3&gt;tag, all the way down to the &lt;h6&gt; tag. Each of the
-        headings decreases in size according to its importance. It is important
-        to avoid using more than one &lt;h1&gt; element for one code sheet.
-      </p>
-      <h3>Dont do this</h3>
-      <code>
-        &lt;main&gt; <br />&lt;div&gt;<br />
-        &lt;h1&gt;Can Coding be fun?&lt;/h1&gt;<br />
-        &lt;p&gt;The more you code the better you become&lt;/p&gt; <br />
-        &lt;/div&gt; <br />
-        &lt;div&gt; <br />
-        &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
-        &lt;p&gt;It is always better when you have fun coding&lt;/p&gt; <br />
-        &lt;/div&gt; <br />
-        &lt;/main&gt;
-      </code>
-      <p>
-        In the above example, we used the &lt;h1&gt; tag on the first and second
-        &lt;div&gt;. Coding this way will work, but although you will achieve
-        the same goal, this is not the best practice.
-      </p>
-      <h3>Do this instead</h3>
-      <code>
-        &lt;main&gt; <br />&lt;div&gt;<br />
-        &lt;h1&gt;Can Coding be fun?&lt;/h1&gt;<br />
-        &lt;p&gt;The more you code the better you become&lt;/p&gt; <br />
-        &lt;/div&gt; <br />
-        &lt;div&gt; <br />
-        &lt;h2&gt;Coding is fun&lt;/h2&gt; <br />
-        &lt;p&gt;It is always better when you have fun coding&lt;/p&gt; <br />
-        &lt;/div&gt; <br />
-        &lt;/main&gt;
-      </code>
-      <p>
-        Having only one &lt;h1&gt; element on a web page is vital for Search
-        Engine Optimization (SEO). It helps search engines understand what a web
-        page is all about (the main idea of a web page).
-      </p>
-    </section>
-    <section>
-      <h2>Do not skip heading levels in HTML</h2>
-      <p>
-        When using the header tags, it's vital to proceed from &lt;h1&gt; to
-        &lt;h2&gt; to &lt;h3&gt; to &lt;h4&gt; and so on... Don't use &lt;h1&gt;
-        and then jump to &lt;h3&gt; when using header tags. It's difficult for
-        web visitors using a screen reader to understand the contents of your
-        web page when you skip heading levels.
-      </p>
-      <p>
-        A screen reader is a technology that helps people who have difficulty
-        seeing access and interact with digital content, like websites or
-        applications via audio or touch. The main users of screen readers are
-        people who are blind or have very limited vision.
-      </p>
-      <h3>Dont do this</h3>
-      <code>
-        &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
-        &lt;h3&gt;It is always better when you have fun coding&lt;/h3&gt; <br />
-        &lt;h5&gt;Consistency is Key&lt;/h5&gt;
-      </code>
-      <h3>Do this instead</h3>
-      <code>
-        &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
-        &lt;h2&gt;It is always better when you have fun coding&lt;/h2&gt; <br />
-        &lt;h3&gt;Consistency is Key&lt;/h3&gt;
-      </code>
-    </section>
+    <div class="container">
+      <h1>Best practices for structuring content</h1>
+      <section>
+        <h2>Use only one &lt;h1&gt; element for one code sheet</h2>
+        <p>
+          There are six different heading tags in HTML, &lt;h1&gt; to
+          &lt;h6&gt;. The &lt;h1&gt; tag is the main heading (subject of the web
+          page) while the &lt;h6&gt; tag is the least important heading. The
+          &lt;h1&gt; tag is bigger than the &lt;h2&gt; tag, the &lt;h2&gt; tag
+          is bigger than the &lt;h3&gt;tag, all the way down to the &lt;h6&gt;
+          tag. Each of the headings decreases in size according to its
+          importance. It is important to avoid using more than one &lt;h1&gt;
+          element for one code sheet.
+        </p>
+        <h3>Dont do this</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;main&gt; <br />&lt;div&gt;<br />
+              &lt;h1&gt;Can Coding be fun?&lt;/h1&gt;<br />
+              &lt;p&gt;The more you code the better you become&lt;/p&gt; <br />
+              &lt;/div&gt; <br />
+              &lt;div&gt; <br />
+              &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
+              &lt;p&gt;It is always better when you have fun coding&lt;/p&gt;
+              <br />
+              &lt;/div&gt; <br />
+              &lt;/main&gt;
+            </code>
+          </div>
+        </div>
+        <p>
+          In the above example, we used the &lt;h1&gt; tag on the first and
+          second &lt;div&gt;. Coding this way will work, but although you will
+          achieve the same goal, this is not the best practice.
+        </p>
+        <h3>Do this instead</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;main&gt; <br />&lt;div&gt;<br />
+              &lt;h1&gt;Can Coding be fun?&lt;/h1&gt;<br />
+              &lt;p&gt;The more you code the better you become&lt;/p&gt; <br />
+              &lt;/div&gt; <br />
+              &lt;div&gt; <br />
+              &lt;h2&gt;Coding is fun&lt;/h2&gt; <br />
+              &lt;p&gt;It is always better when you have fun coding&lt;/p&gt;
+              <br />
+              &lt;/div&gt; <br />
+              &lt;/main&gt;
+            </code>
+          </div>
+        </div>
+        <p>
+          Having only one &lt;h1&gt; element on a web page is vital for Search
+          Engine Optimization (SEO). It helps search engines understand what a
+          web page is all about (the main idea of a web page).
+        </p>
+      </section>
+      <section>
+        <h2>Do not skip heading levels in HTML</h2>
+        <p>
+          When using the header tags, it's vital to proceed from &lt;h1&gt; to
+          &lt;h2&gt; to &lt;h3&gt; to &lt;h4&gt; and so on... Don't use
+          &lt;h1&gt; and then jump to &lt;h3&gt; when using header tags. It's
+          difficult for web visitors using a screen reader to understand the
+          contents of your web page when you skip heading levels.
+        </p>
+        <p>
+          A screen reader is a technology that helps people who have difficulty
+          seeing access and interact with digital content, like websites or
+          applications via audio or touch. The main users of screen readers are
+          people who are blind or have very limited vision.
+        </p>
+        <h3>Dont do this</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
+              &lt;h3&gt;It is always better when you have fun coding&lt;/h3&gt;
+              <br />
+              &lt;h5&gt;Consistency is Key&lt;/h5&gt;
+            </code>
+          </div>
+        </div>
+        <h3>Do this instead</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;h1&gt;Coding is fun&lt;/h1&gt; <br />
+              &lt;h2&gt;It is always better when you have fun coding&lt;/h2&gt;
+              <br />
+              &lt;h3&gt;Consistency is Key&lt;/h3&gt;
+            </code>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Use the figure element to add captions to your images in HTML</h2>
-      <p>
-        It's advisable to use the &lt;figure&gt; element when adding captions to
-        your images. It is important to use the &lt;figcaption&gt; element along
-        with the &lt;figure&gt; element for it to work.
-      </p>
-      <h3>Dont do this</h3>
-      <code>
-        &lt;div&gt; <br />
-        &lt;img src="“a-man-coding.jpg”" alt="“A" man working on his computer”
-        /&gt; <br />
-        &lt;p&gt;This is a picture of a man working on his computer&lt;/p&gt;
-        <br />
-        &lt;/div&gt;
-      </code>
-      <p>
-        The above example will work as expected but is not the best way to go
-        about it. In a situation where the image fails to load you will have the
-        alt text and the text on the &lt;p&gt; element showing on the screen. It
-        will be difficult for a web visitor using a screen reader to tell the
-        difference between the &lt;p&gt; and alt text. Always keep in mind that
-        just because your code works doesn't mean you're following best
-        practices.
-      </p>
-      <h3>Do this instead</h3>
-      <code>
-        &lt;figure&gt; <br />
-        &lt;img src="“a-man-coding.jpg”" alt="“A" man working on his computer”
-        /&gt; <br />
-        &lt;figcaption&gt; <br />
-        This is a picture of a man working on his computer &lt;/figcaption&gt;
-        <br />
-        &lt;/figure&gt;
-      </code>
-      <p>The above example is the best way to add captions to your images.</p>
+      <section>
+        <h2>Use the figure element to add captions to your images in HTML</h2>
+        <p>
+          It's advisable to use the &lt;figure&gt; element when adding captions
+          to your images. It is important to use the &lt;figcaption&gt; element
+          along with the &lt;figure&gt; element for it to work.
+        </p>
+        <h3>Dont do this</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;div&gt; <br />
+              &lt;img src="“a-man-coding.jpg”" alt="“A" man working on his
+              computer” /&gt; <br />
+              &lt;p&gt;This is a picture of a man working on his
+              computer&lt;/p&gt;
+              <br />
+              &lt;/div&gt;
+            </code>
+          </div>
+        </div>
+        <p>
+          The above example will work as expected but is not the best way to go
+          about it. In a situation where the image fails to load you will have
+          the alt text and the text on the &lt;p&gt; element showing on the
+          screen. It will be difficult for a web visitor using a screen reader
+          to tell the difference between the &lt;p&gt; and alt text. Always keep
+          in mind that just because your code works doesn't mean you're
+          following best practices.
+        </p>
+        <h3>Do this instead</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;figure&gt; <br />
+              &lt;img src="“a-man-coding.jpg”" alt="“A" man working on his
+              computer” /&gt; <br />
+              &lt;figcaption&gt; <br />
+              This is a picture of a man working on his computer
+              &lt;/figcaption&gt;
+              <br />
+              &lt;/figure&gt;
+            </code>
+          </div>
+        </div>
+        <p>The above example is the best way to add captions to your images.</p>
 
-      <p>It is important to add captions to your images this way for:</p>
-      <ul>
-        <li>
-          Search engine optimization: It is easier to find your images on search
-          engines.
-        </li>
-        <li>
-          It will be easier for web visitors who use screen readers to
-          understand the content of your web page.
-        </li>
-      </ul>
-    </section>
+        <p>It is important to add captions to your images this way for:</p>
+        <ul>
+          <li>
+            Search engine optimization: It is easier to find your images on
+            search engines.
+          </li>
+          <li>
+            It will be easier for web visitors who use screen readers to
+            understand the content of your web page.
+          </li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>
-        Do not use divs to create headers and footers – use semantic elements
-        instead
-      </h2>
-      <p>
-        HTML semantic elements mark up the structure of a document in a more
-        meaningful way on a webpage. It is best practice to use HTML semantic
-        elements for the proper assembly of your web page.
-      </p>
-      <p>
-        Avoid using &lt;divs&gt; in place of HTML semantics. Do not use
-        &lt;div&gt; elements to show headers and footers on your web page. Use
-        semantic &lt;header&gt; and &lt;footer&gt; elements instead. The
-        &lt;header&gt; element shows the navigation or the opening part of the
-        web page. The &lt;footer&gt; element shows copyright information or
-        navigation links about the web page.
-      </p>
-      <h3>Don't do this:</h3>
-      <code>
-        &lt;div class="header"&gt; <br />
-        &lt;a href="index.html"&gt;Home&lt;/a&gt; <br />
-        &lt;a href="#"&gt;About&lt;/a&gt; <br />
-        &lt;a href="#"&gt;Contact&lt;/a&gt; <br />
-        &lt;/div&gt; <br />
+      <section>
+        <h2>
+          Do not use divs to create headers and footers – use semantic elements
+          instead
+        </h2>
+        <p>
+          HTML semantic elements mark up the structure of a document in a more
+          meaningful way on a webpage. It is best practice to use HTML semantic
+          elements for the proper assembly of your web page.
+        </p>
+        <p>
+          Avoid using &lt;divs&gt; in place of HTML semantics. Do not use
+          &lt;div&gt; elements to show headers and footers on your web page. Use
+          semantic &lt;header&gt; and &lt;footer&gt; elements instead. The
+          &lt;header&gt; element shows the navigation or the opening part of the
+          web page. The &lt;footer&gt; element shows copyright information or
+          navigation links about the web page.
+        </p>
+        <h3>Don't do this:</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;div class="header"&gt; <br />
+              &lt;a href="index.html"&gt;Home&lt;/a&gt; <br />
+              &lt;a href="#"&gt;About&lt;/a&gt; <br />
+              &lt;a href="#"&gt;Contact&lt;/a&gt; <br />
+              &lt;/div&gt; <br />
 
-        &lt;div class="footer"&gt; <br />
-        &lt;a href="index.html"&gt;Home&lt;/a&gt; <br />
-        &lt;a href="#"&gt;About&lt;/a&gt; <br />
-        &lt;a href="#"&gt;Contact&lt;/a&gt; <br />
-        &lt;/div&gt;
-      </code>
-      <p>
-        In the above example, we used the &lt;div&gt; tag as a container for the
-        &lt;header&gt; and &lt;footer&gt;. Coding this way will work, but
-        although you will achieve the same goal, this is not the best practice.
-      </p>
-      <h3>Do this instead</h3>
-      <code>
-        &lt;header&gt; <br />
-        &lt;h1&gt;Header&lt;/h1&gt; <br />
-        &lt;/header&gt; <br />
+              &lt;div class="footer"&gt; <br />
+              &lt;a href="index.html"&gt;Home&lt;/a&gt; <br />
+              &lt;a href="#"&gt;About&lt;/a&gt; <br />
+              &lt;a href="#"&gt;Contact&lt;/a&gt; <br />
+              &lt;/div&gt;
+            </code>
+          </div>
+        </div>
+        <p>
+          In the above example, we used the &lt;div&gt; tag as a container for
+          the &lt;header&gt; and &lt;footer&gt;. Coding this way will work, but
+          although you will achieve the same goal, this is not the best
+          practice.
+        </p>
+        <h3>Do this instead</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;header&gt; <br />
+              &lt;h1&gt;Header&lt;/h1&gt; <br />
+              &lt;/header&gt; <br />
 
-        &lt;footer&gt; <br />
-        &lt;a href="index.html"&gt;Home&lt;/a&gt; <br />
-        &lt;a href="#"&gt;About&lt;/a&gt; <br />
-        &lt;a href="#"&gt;Contact&lt;/a&gt; <br />
-        &lt;/footer&gt;
-      </code>
-      <p>
-        The above example is the best way to add &lt;footers&gt; and
-        &lt;headers&gt; to your web page. It is important to add &lt;footer&gt;
-        and &lt;header&gt; using HTML semantic elements because:
-      </p>
-      <ul>
-        <li>
-          Using semantic elements for your header and footer makes your code
-          easier to read.
-        </li>
-        <li>
-          It provides a better user experience for web visitors. It will be
-          easier for web visitors who use screen readers to understand the
-          content of your web page.
-        </li>
-      </ul>
-      <p>
-        Checkout this article to know more about
-        <a
-          href="https://www.freecodecamp.org/news/semantic-html5-elements/#:~:text=Semantic%20HTML%20elements%20are%20those,content%20that%20is%20inside%20them"
-          target="_blank"
-          >HTML semantic elements.
-        </a>
-      </p>
-    </section>
+              &lt;footer&gt; <br />
+              &lt;a href="index.html"&gt;Home&lt;/a&gt; <br />
+              &lt;a href="#"&gt;About&lt;/a&gt; <br />
+              &lt;a href="#"&gt;Contact&lt;/a&gt; <br />
+              &lt;/footer&gt;
+            </code>
+          </div>
+        </div>
+        <p>
+          The above example is the best way to add &lt;footers&gt; and
+          &lt;headers&gt; to your web page. It is important to add
+          &lt;footer&gt; and &lt;header&gt; using HTML semantic elements
+          because:
+        </p>
+        <ul>
+          <li>
+            Using semantic elements for your header and footer makes your code
+            easier to read.
+          </li>
+          <li>
+            It provides a better user experience for web visitors. It will be
+            easier for web visitors who use screen readers to understand the
+            content of your web page.
+          </li>
+        </ul>
+        <p>
+          Checkout this article to know more about
+          <a
+            href="https://www.freecodecamp.org/news/semantic-html5-elements/#:~:text=Semantic%20HTML%20elements%20are%20those,content%20that%20is%20inside%20them"
+            target="_blank"
+            >HTML semantic elements.
+          </a>
+        </p>
+      </section>
 
-    <section>
-      <h2>
-        Avoid using &lt;b&gt; and &lt;i&gt; to bold and italicize texts on a web
-        page
-      </h2>
-      <p>
-        The &lt;b&gt; and &lt;i&gt; tags are also known as the bold and italics
-        tag. They are both used to highlight words in a text on a web page. You
-        shouldn't use &lt;b&gt; and &lt;i&gt; for bolding and italics because
-        they have no semantic meaning. Use the font-weight CSS property or use
-        the &lt;strong&gt; and the &lt;em&gt; tags instead.
-      </p>
-      <p>
-        You use the &lt;strong&gt; tag to make a text on a webpage important. It
-        highlights or bolds a text on a webpage. The &lt;em&gt; tag emphasizes
-        the text in a webpage. It also displays the text in italics like the
-        &lt;i&gt; tag.
-      </p>
-      <h3>Don't do this:</h3>
-      <code>
-        &lt;p&gt;&lt;i&gt;Code at your own pace&lt;/i&gt;&lt;/p&gt; <br />
+      <section>
+        <h2>
+          Avoid using &lt;b&gt; and &lt;i&gt; to bold and italicize texts on a
+          web page
+        </h2>
+        <p>
+          The &lt;b&gt; and &lt;i&gt; tags are also known as the bold and
+          italics tag. They are both used to highlight words in a text on a web
+          page. You shouldn't use &lt;b&gt; and &lt;i&gt; for bolding and
+          italics because they have no semantic meaning. Use the font-weight CSS
+          property or use the &lt;strong&gt; and the &lt;em&gt; tags instead.
+        </p>
+        <p>
+          You use the &lt;strong&gt; tag to make a text on a webpage important.
+          It highlights or bolds a text on a webpage. The &lt;em&gt; tag
+          emphasizes the text in a webpage. It also displays the text in italics
+          like the &lt;i&gt; tag.
+        </p>
+        <h3>Don't do this:</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;p&gt;&lt;i&gt;Code at your own pace&lt;/i&gt;&lt;/p&gt; <br />
 
-        &lt;p&gt;&lt;b&gt;code at your own pace&lt;/b&gt;&lt;/p&gt;
-      </code>
-      <p>
-        The displayed texts will be bold and italicized in the example above. It
-        will be of no importance to the web user using a screen reader. It has
-        no semantic meaning. The HTML5 specification says that the &lt;b&gt; and
-        &lt;i&gt; tags should only be used as a last resort if no other tag is
-        available.
-      </p>
-      <h3>Do this instead:</h3>
-      <code>
-        &lt;p&gt;&lt;strong&gt;Code at your own pace&lt;/strong&gt;&lt;/p&gt;
-        <br />
+              &lt;p&gt;&lt;b&gt;code at your own pace&lt;/b&gt;&lt;/p&gt;
+            </code>
+          </div>
+        </div>
+        <p>
+          The displayed texts will be bold and italicized in the example above.
+          It will be of no importance to the web user using a screen reader. It
+          has no semantic meaning. The HTML5 specification says that the
+          &lt;b&gt; and &lt;i&gt; tags should only be used as a last resort if
+          no other tag is available.
+        </p>
+        <h3>Do this instead:</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;p&gt;&lt;strong&gt;Code at your own
+              pace&lt;/strong&gt;&lt;/p&gt;
+              <br />
 
-        &lt;p&gt;&lt;em&gt;code at your own pace&lt;/em&gt;&lt;/p&gt
-      </code>
-    </section>
-    <section>
-      <h2>Don't place block-level element within inline elements</h2>
-      <p>
-        Block-level elements start in a new line on a web page. By default, they
-        stretch from the beginning of the line to the end on a web page. You
-        won't be able to add more content inline to a block element without
-        using CSS.
-      </p>
-      <p>
-        The &lt;p&gt;, &lt;h1&gt;-&lt;h6&gt;, and the &lt;div&gt; elements are
-        some of the examples of a block level element. The inline element covers
-        the smallest area on a web page. They do not start on a new line on a
-        web page. The &lt;span&gt;, &lt;em&gt;, and the &lt;a&gt; elements are
-        some of the examples of inline elements. You cannot place block elements
-        inside inline elements.
-      </p>
-      <h3>Dont do this:</h3>
-      <code>
-        &lt;a href="#" &gt; <br />
+              &lt;p&gt;&lt;em&gt;code at your own pace&lt;/em&gt;&lt;/p&gt;
+            </code>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Don't place block-level element within inline elements</h2>
+        <p>
+          Block-level elements start in a new line on a web page. By default,
+          they stretch from the beginning of the line to the end on a web page.
+          You won't be able to add more content inline to a block element
+          without using CSS.
+        </p>
+        <p>
+          The &lt;p&gt;, &lt;h1&gt;-&lt;h6&gt;, and the &lt;div&gt; elements are
+          some of the examples of a block level element. The inline element
+          covers the smallest area on a web page. They do not start on a new
+          line on a web page. The &lt;span&gt;, &lt;em&gt;, and the &lt;a&gt;
+          elements are some of the examples of inline elements. You cannot place
+          block elements inside inline elements.
+        </p>
+        <h3>Dont do this:</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;a href="#" &gt; <br />
 
-        &lt;p&gt; Visit freecodecamp &lt;/p&gt; <br />
+              &lt;p&gt; Visit freecodecamp &lt;/p&gt; <br />
 
-        &lt;/a&gt;
-      </code>
-      <p>
-        You cannot wrap &lt;p&gt; inside a &lt;a&gt; element because &lt;p&gt;
-        is a block-level element and &lt;a&gt; is an inline element.
-      </p>
-      <h3>Do this instead:</h3>
-      <code>
-        &lt;p&gt; <br />
-        Visit &lt;a href="#" target="_blank"&gt;FreecodeCamp&lt;/a&gt; to learn
-        Javascript <br />
-        &lt;/p&gt;
-      </code>
-      <p>
-        The above example is the best way to nest inline elements inside a
-        block-level element. It is important to note that:
-      </p>
-      <ul>
-        <li>
-          The block-level element cannot be nested inside an inline element.
-        </li>
-        <li>The inline element can be nested inside a block-level element.</li>
-        <li>
-          The inline and the block-level element can be nested inside the
-          block-level element.
-        </li>
-      </ul>
-      <p>
-        Just a quick note: nested, in the above example, means to place inside.
-        So when I say it can't be nested, I'm referring to the fact that it
-        can't be placed inside. I hope you understand these three simple rules
-        used for nesting elements.
-      </p>
-      <p>
-        It is also possible to convert block-level elements to inline elements
-        and vice versa using CSS. Use display: inline-block and display: inline
-        to convert from block-level to inline element. It's important to
-        remember that just because your code works doesn't mean you're following
-        best practices.
-      </p>
-      <p>
-        Learn more about the best practices in HTML while developing a webpage
-        from this
-        <a
-          href="https://www.webfx.com/blog/web-design/20-html-best-practices-you-should-follow/"
-          target="_blank"
-          >link.
-        </a>
-      </p>
-    </section>
+              &lt;/a&gt;
+            </code>
+          </div>
+        </div>
+        <p>
+          You cannot wrap &lt;p&gt; inside a &lt;a&gt; element because &lt;p&gt;
+          is a block-level element and &lt;a&gt; is an inline element.
+        </p>
+        <h3>Do this instead:</h3>
+        <div class="code">
+          <div class="code-base">
+            <code>
+              &lt;p&gt; <br />
+              Visit &lt;a href="#" target="_blank"&gt;FreecodeCamp&lt;/a&gt; to
+              learn Javascript <br />
+              &lt;/p&gt;
+            </code>
+          </div>
+        </div>
+        <p>
+          The above example is the best way to nest inline elements inside a
+          block-level element. It is important to note that:
+        </p>
+        <ul>
+          <li>
+            The block-level element cannot be nested inside an inline element.
+          </li>
+          <li>
+            The inline element can be nested inside a block-level element.
+          </li>
+          <li>
+            The inline and the block-level element can be nested inside the
+            block-level element.
+          </li>
+        </ul>
+        <p>
+          Just a quick note: nested, in the above example, means to place
+          inside. So when I say it can't be nested, I'm referring to the fact
+          that it can't be placed inside. I hope you understand these three
+          simple rules used for nesting elements.
+        </p>
+        <p>
+          It is also possible to convert block-level elements to inline elements
+          and vice versa using CSS. Use display: inline-block and display:
+          inline to convert from block-level to inline element. It's important
+          to remember that just because your code works doesn't mean you're
+          following best practices.
+        </p>
+        <p>
+          Learn more about the best practices in HTML while developing a webpage
+          from this
+          <a
+            href="https://www.webfx.com/blog/web-design/20-html-best-practices-you-should-follow/"
+            target="_blank"
+            >link.
+          </a>
+        </p>
+      </section>
+    </div>
   </body>
 </html>

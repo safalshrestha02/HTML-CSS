@@ -3,219 +3,220 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/aria.css" />
     <title>ARIA roles and attributes</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="introduction.html">Introduction to HTML</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
         <li>
-          <a href="semantic.html">Document structure, tags, and semantics</a>
+          <a href="semantic.html">Document structure</a>
         </li>
         <li>
-          <a href="headings-links.html">
-            Headings, paragraphs, lists, and links
-          </a>
+          <a href="headings-links.html"> HTML text fundamentals </a>
         </li>
-        <li><a href="multimedia.html">Multimedia (images, audio, video)</a></li>
-        <li><a href="forms.html">Forms and input elements & attributes</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="forms.html">Forms</a></li>
         <li>
-          <a href="aria.html">ARIA roles and attributes for accessibility</a>
+          <a href="aria.html">ARIA</a>
         </li>
         <li>
-          <a href="accessibility.html">
-            Writing semantic HTML and accessibility best practices
-          </a>
+          <a href="accessibility.html"> Accessibility </a>
         </li>
         <li>
-          <a href="best-practices.html">
-            Best practices for structuring content
-          </a>
+          <a href="best-practices.html"> HTML best practices </a>
         </li>
       </ul>
     </nav>
-    <h1>ARIA roles and attributes for accessibility</h1>
-    <section>
-      <p>
-        Accessible Rich Internet Applications (ARIA) is a set of roles and
-        attributes that define ways to make web content and web applications
-        (especially those developed with JavaScript) more accessible to people
-        with disabilities.
-      </p>
-      <p>
-        It supplements HTML so that interactions and widgets commonly used in
-        applications can be passed to assistive technologies when there is not
-        otherwise a mechanism. For example, ARIA enables accessible JavaScript
-        widgets, form hints and error messages, live content updates, and more.
-      </p>
-      <p>
-        The first rule of ARIA use is "If you can use a native HTML element or
-        attribute with the semantics and behavior you require already built in,
-        instead of re-purposing an element and adding an ARIA role, state or
-        property to make it accessible, then do so."
-      </p>
+    <div class="container">
+      <h1>ARIA roles and attributes for accessibility</h1>
+      <section>
+        <p>
+          Accessible Rich Internet Applications (ARIA) is a set of roles and
+          attributes that define ways to make web content and web applications
+          (especially those developed with JavaScript) more accessible to people
+          with disabilities.
+        </p>
+        <p>
+          It supplements HTML so that interactions and widgets commonly used in
+          applications can be passed to assistive technologies when there is not
+          otherwise a mechanism. For example, ARIA enables accessible JavaScript
+          widgets, form hints and error messages, live content updates, and
+          more.
+        </p>
+        <p>
+          The first rule of ARIA use is "If you can use a native HTML element or
+          attribute with the semantics and behavior you require already built
+          in, instead of re-purposing an element and adding an ARIA role, state
+          or property to make it accessible, then do so."
+        </p>
 
-      <h2>Support</h2>
-      <p>
-        Like any other web technology, there are varying degrees of support for
-        ARIA. Support is based on the operating system and browser being used,
-        as well as the kind of assistive technology interfacing with it. In
-        addition, the version of the operating system, browser, and assistive
-        technology are contributing factors. Older software versions may not
-        support certain ARIA roles, have only partial support, or misreport its
-        functionality.
-      </p>
-      <p>
-        It is also important to acknowledge that some people who rely on
-        assistive technology are reluctant to upgrade their software, for fear
-        of losing the ability to interact with their computer and browser.
-        Because of this, it is important to use semantic HTML elements whenever
-        possible, as semantic HTML has far better support for assistive
-        technology.
-      </p>
-      <p>
-        It is also important to test your authored ARIA with actual assistive
-        technology. This is because browser emulators and simulators are not
-        really effective for testing full support. Similarly, proxy assistive
-        technology solutions are not sufficient to fully guarantee
-        functionality.
-      </p>
-      <p>
-        Please go through this
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
-          target="_blank"
-          >documentation
-        </a>
-        by MDN to know more about ARIA
-      </p>
+        <h2>Support</h2>
+        <p>
+          Like any other web technology, there are varying degrees of support
+          for ARIA. Support is based on the operating system and browser being
+          used, as well as the kind of assistive technology interfacing with it.
+          In addition, the version of the operating system, browser, and
+          assistive technology are contributing factors. Older software versions
+          may not support certain ARIA roles, have only partial support, or
+          misreport its functionality.
+        </p>
+        <p>
+          It is also important to acknowledge that some people who rely on
+          assistive technology are reluctant to upgrade their software, for fear
+          of losing the ability to interact with their computer and browser.
+          Because of this, it is important to use semantic HTML elements
+          whenever possible, as semantic HTML has far better support for
+          assistive technology.
+        </p>
+        <p>
+          It is also important to test your authored ARIA with actual assistive
+          technology. This is because browser emulators and simulators are not
+          really effective for testing full support. Similarly, proxy assistive
+          technology solutions are not sufficient to fully guarantee
+          functionality.
+        </p>
+        <p>
+          Please go through this
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA"
+            target="_blank"
+            >documentation
+          </a>
+          by MDN to know more about ARIA
+        </p>
 
-      <h2>ARIA Roles</h2>
-      <p>
-        ARIA roles provide semantic meaning to content, allowing screen readers
-        and other tools to present and support interaction with an object in a
-        way that is consistent with user expectations of that type of object.
-        ARIA roles can be used to describe elements that don't natively exist in
-        HTML or exist but don't yet have full browser support.
-      </p>
-      <p>
-        By default, many semantic elements in HTML have a role; for example,
-        &lt;input type="radio"&gt; has the "radio" role. Non-semantic elements
-        in HTML do not have a role; &lt;div&gt; and &lt;span&gt; without added
-        semantics return null. The role attribute can provide semantics.
-      </p>
-      <p>
-        ARIA roles are added to HTML elements using role="role type", where role
-        type is the name of a role in the ARIA specification. Some roles require
-        the inclusion of associated ARIA states or properties; others are only
-        valid in association with other roles.
-      </p>
-      <p>
-        For example, &lt;ul role="tabpanel"&gt; will be announced as a 'tab
-        panel' by screen readers. However, if the tab panel doesn't have nested
-        tabs, the element with the tabpanel role is not in fact a tab panel and
-        accessibility has actually been negatively impacted. The ARIA states and
-        properties associated with each role are included in the role's pages,
-        with each attribute also having a dedicated page.
-      </p>
+        <h2>ARIA Roles</h2>
+        <p>
+          ARIA roles provide semantic meaning to content, allowing screen
+          readers and other tools to present and support interaction with an
+          object in a way that is consistent with user expectations of that type
+          of object. ARIA roles can be used to describe elements that don't
+          natively exist in HTML or exist but don't yet have full browser
+          support.
+        </p>
+        <p>
+          By default, many semantic elements in HTML have a role; for example,
+          &lt;input type="radio"&gt; has the "radio" role. Non-semantic elements
+          in HTML do not have a role; &lt;div&gt; and &lt;span&gt; without added
+          semantics return null. The role attribute can provide semantics.
+        </p>
+        <p>
+          ARIA roles are added to HTML elements using role="role type", where
+          role type is the name of a role in the ARIA specification. Some roles
+          require the inclusion of associated ARIA states or properties; others
+          are only valid in association with other roles.
+        </p>
+        <p>
+          For example, &lt;ul role="tabpanel"&gt; will be announced as a 'tab
+          panel' by screen readers. However, if the tab panel doesn't have
+          nested tabs, the element with the tabpanel role is not in fact a tab
+          panel and accessibility has actually been negatively impacted. The
+          ARIA states and properties associated with each role are included in
+          the role's pages, with each attribute also having a dedicated page.
+        </p>
 
-      <h2>ARIA role types</h2>
-      <p>There are 6 categories of ARIA roles:</p>
-      <ol>
-        <li>Document structure roles</li>
+        <h2>ARIA role types</h2>
+        <p>There are 6 categories of ARIA roles:</p>
+        <ol>
+          <li>Document structure roles</li>
+          <p>
+            Document Structure roles are used to provide a structural
+            description for a section of content. Most of these roles should no
+            longer be used as browsers now support semantic HTML element with
+            the same meaning. The roles without HTML equivalents, such as
+            presentation, toolbar and tooltip roles, provide information on the
+            document structure to assistive technologies such as screen readers
+            as equivalent native HTML tags are not available.
+          </p>
+          <li>Widget roles</li>
+          <p>
+            The various widget role are used to define common interactive
+            patterns. Similar to the document structure roles, some of these
+            roles duplicate the semantics of native HTML elements that are well
+            supported, and should not be used. The difference between the two
+            lists is that, generally, the widget roles require JavaScript
+            interaction and the document structure roles don't necessarily.
+          </p>
+          <li>Landmark roles</li>
+          <p>
+            Landmark roles provide a way to identify the organization and
+            structure of a web page. By classifying and labeling sections of a
+            page, structural information conveyed visually through layout is
+            represented programmatically. Screen readers use landmark roles to
+            provide keyboard navigation to important sections of a page. Use
+            these sparingly. Too many landmark roles create "noise" in screen
+            readers, making it difficult to understand the overall layout of the
+            page.
+          </p>
+          <li>Live region roles</li>
+          <p>
+            Live Region roles are used to define elements with content that will
+            be dynamically changed. Sighted users can see dynamic changes when
+            they are visually noticeable. These roles help low vision and blind
+            users know if content has been updated. Assistive technologies, like
+            screen readers, can be made to announce dynamic content changes:
+          </p>
+          <li>Window roles</li>
+          <p>
+            Window roles define sub-windows to the main document window, within
+            the same window, such as pop up modal dialogs.
+          </p>
+          <li>Abstract roles</li>
+          <p>
+            Abstract roles are only intended for use by browsers to help
+            organize and streamline a document. They should not be used by
+            developers writing HTML markup. Doing so will not result in any
+            meaningful information being conveyed to assistive technologies or
+            to users.
+          </p>
+        </ol>
         <p>
-          Document Structure roles are used to provide a structural description
-          for a section of content. Most of these roles should no longer be used
-          as browsers now support semantic HTML element with the same meaning.
-          The roles without HTML equivalents, such as presentation, toolbar and
-          tooltip roles, provide information on the document structure to
-          assistive technologies such as screen readers as equivalent native
-          HTML tags are not available.
+          Go through this
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles"
+            target="_blank"
+            >documentation
+          </a>
+          for a in-depth knowledge on ARIA roles
         </p>
-        <li>Widget roles</li>
-        <p>
-          The various widget role are used to define common interactive
-          patterns. Similar to the document structure roles, some of these roles
-          duplicate the semantics of native HTML elements that are well
-          supported, and should not be used. The difference between the two
-          lists is that, generally, the widget roles require JavaScript
-          interaction and the document structure roles don't necessarily.
-        </p>
-        <li>Landmark roles</li>
-        <p>
-          Landmark roles provide a way to identify the organization and
-          structure of a web page. By classifying and labeling sections of a
-          page, structural information conveyed visually through layout is
-          represented programmatically. Screen readers use landmark roles to
-          provide keyboard navigation to important sections of a page. Use these
-          sparingly. Too many landmark roles create "noise" in screen readers,
-          making it difficult to understand the overall layout of the page.
-        </p>
-        <li>Live region roles</li>
-        <p>
-          Live Region roles are used to define elements with content that will
-          be dynamically changed. Sighted users can see dynamic changes when
-          they are visually noticeable. These roles help low vision and blind
-          users know if content has been updated. Assistive technologies, like
-          screen readers, can be made to announce dynamic content changes:
-        </p>
-        <li>Window roles</li>
-        <p>
-          Window roles define sub-windows to the main document window, within
-          the same window, such as pop up modal dialogs.
-        </p>
-        <li>Abstract roles</li>
-        <p>
-          Abstract roles are only intended for use by browsers to help organize
-          and streamline a document. They should not be used by developers
-          writing HTML markup. Doing so will not result in any meaningful
-          information being conveyed to assistive technologies or to users.
-        </p>
-      </ol>
-      <p>
-        Go through this
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles"
-          target="_blank"
-          >documentation
-        </a>
-        for a in-depth knowledge on ARIA roles
-      </p>
 
-      <h2>ARIA states and properties</h2>
-      <p>
-        ARIA attributes enable modifying an element's states and properties as
-        defined in the accessibility tree.
-      </p>
-      <h3>ARIA attribute types</h3>
-      <p>There are 4 categories of ARIA states and properties:</p>
-      <ol>
-        <li>Widget attributes</li>
-        <li>Live region attributes</li>
-        <li>Drag-and-Drop attributes</li>
-        <li>Relationship attributes</li>
-      </ol>
+        <h2>ARIA states and properties</h2>
+        <p>
+          ARIA attributes enable modifying an element's states and properties as
+          defined in the accessibility tree.
+        </p>
+        <h3>ARIA attribute types</h3>
+        <p>There are 4 categories of ARIA states and properties:</p>
+        <ol>
+          <li>Widget attributes</li>
+          <li>Live region attributes</li>
+          <li>Drag-and-Drop attributes</li>
+          <li>Relationship attributes</li>
+        </ol>
 
-      <h3>Global ARIA attributes</h3>
-      <p>
-        Some states and properties apply to all HTML elements regardless of
-        whether an ARIA role is applied. These are defined as "Global"
-        attributes. Global states and properties are supported by all roles and
-        base markup elements.
-      </p>
-      <p>
-        Many of the above attributes are global, meaning they can be included on
-        any element unless specifically disallowed
-      </p>
-      <p>
-        Go through this
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes"
-          target="_blank"
-          >documentation
-        </a>
-        to know more about ARIA attributes.
-      </p>
-    </section>
+        <h3>Global ARIA attributes</h3>
+        <p>
+          Some states and properties apply to all HTML elements regardless of
+          whether an ARIA role is applied. These are defined as "Global"
+          attributes. Global states and properties are supported by all roles
+          and base markup elements.
+        </p>
+        <p>
+          Many of the above attributes are global, meaning they can be included
+          on any element unless specifically disallowed
+        </p>
+        <p>
+          Go through this
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes"
+            target="_blank"
+            >documentation
+          </a>
+          to know more about ARIA attributes.
+        </p>
+      </section>
+    </div>
   </body>
 </html>
