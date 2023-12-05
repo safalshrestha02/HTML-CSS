@@ -76,3 +76,20 @@ ol li {
 .code {
   padding-bottom: 20px;
 }
+
+@media only screen and (max-width: 1150px) {
+  nav {
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul li {
+    padding: 0px;
+    margin: 0;
+  }
+}
