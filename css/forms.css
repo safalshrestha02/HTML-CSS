@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+nav {
+  background-color: aqua;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: justify;
+}
+
+h2,
+h3 {
+  padding-bottom: 20px;
+}
+
+.code-base {
+  padding: 20px;
+  border-radius: 2px;
+  background-color: rgb(179, 179, 179);
+  font-style: italic;
+}
+
+p {
+  padding-bottom: 20px;
+}
+
+.intro-section ul li {
+  padding-bottom: 10px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.element-section ul li {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+.code {
+  padding-bottom: 20px;
+}
+
+.code-example {
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aliceblue;
+  border-radius: 2px;
+}
+
+.input-section ul li {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 20px;
+  list-style: none;
+}

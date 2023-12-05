@@ -25,9 +25,14 @@ nav ul li {
   margin: auto;
 }
 
-a {
+nav ul li a {
   text-decoration: none;
   color: black;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .container {
@@ -38,20 +43,27 @@ a {
   text-align: justify;
 }
 
-h1 {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.intro {
-  padding-bottom: 20px;
-}
-
 h2,
 h3 {
   padding-bottom: 20px;
 }
 
+.code-base {
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  background-color: rgb(179, 179, 179);
+  font-style: italic;
+}
+
 p {
   padding-bottom: 20px;
+}
+
+img {
+  padding-bottom: 20px;
+}
+
+figure, video, iframe, audio{
+    padding-bottom: 20px;
 }

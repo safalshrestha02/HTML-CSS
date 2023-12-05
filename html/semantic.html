@@ -3,150 +3,150 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/semantics.css" />
     <title>Introduction</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="introduction.html">Introduction to HTML</a></li>
+        <li><a href="introduction.html">Introduction</a></li>
         <li>
-          <a href="semantic.html">Document structure, tags, and semantics</a>
+          <a href="semantic.html">Document structure</a>
         </li>
         <li>
-          <a href="headings-links.html">
-            Headings, paragraphs, lists, and links
-          </a>
+          <a href="headings-links.html"> HTML text fundamentals </a>
         </li>
-        <li><a href="multimedia.html">Multimedia (images, audio, video)</a></li>
-        <li><a href="forms.html">Forms and input elements & attributes</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="forms.html">Forms</a></li>
         <li>
-          <a href="aria.html">ARIA roles and attributes for accessibility</a>
+          <a href="aria.html">ARIA</a>
         </li>
         <li>
-          <a href="accessibility.html">
-            Writing semantic HTML and accessibility best practices
-          </a>
+          <a href="accessibility.html"> Accessibility </a>
         </li>
         <li>
-          <a href="best-practices.html">
-            Best practices for structuring content
-          </a>
+          <a href="best-practices.html"> HTML best practices </a>
         </li>
       </ul>
     </nav>
-    <h1>Document structure, tags, and semantics</h1>
-    <section>
-      <h2>Introduction</h2>
-      <p>
-        As we all know HTML is a language of the web. It’s used to design the
-        web pages or we can say structure the page layouts of a website. HTML
-        stands for HYPERTEXT MARKUP LANGUAGE, as its full form suggests it’s not
-        any programming language, a markup language. So, while the execution of
-        HTML code we can’t face any such error. In real HTML code wasn’t
-        compiled or interpreted because HTML code was rendered by the browser.
-        which is similar to the compilation of a program. Html content is
-        parched through the browser to display the content of HTML.
-      </p>
-      <h2>HTML document structure</h2>
-      <p>
-        Html used predefined tags and attributes to tell the browser how to
-        display content, means in which format, style, font size, and images to
-        display. Html is a case insensitive language. Case insensitive means
-        there is no difference in upper case and lower case ( capital and small
-        letters) both treated as the same, for r example ‘D’ and ‘d’ both are
-        the same here. There are generally two types of tags in HTML:
-      </p>
-      <ul>
-        <li>
-          Paired Tags: These tags come in pairs. That is they have both
-          opening(&lt; &gt) and closing(&lt;/ &gt) tags.
-        </li>
-        <li>Empty Tags: These tags do not require to be closed.</li>
-      </ul>
-      <p>
-        Below is an example of a &lt;b&gt; tag in HTML, which tells the browser
-        to bold the text inside it.
-      </p>
-      <img
-        src="https://cdn.discordapp.com/attachments/1102860047312224257/1179660491233173524/image.png?ex=657a9772&is=65682272&hm=e017df37e23920483f58fd54eee7226eced45412b1303ea9a39e7bf40b76cf35&"
-        target="_blank"
-      />
-    </section>
-    <section>
-      Tags and attributes: Tags are individuals of html structure, we have to
-      open and close any tag with a forward slash like this
-      &lt;h1&gt;&lt;/h1&gt;. There are some variations with the tag some of them
-      are self-closing tag which isn’t required to close and some are empty tag
-      where we can add any attributes in it. Attributes are additional
-      properties of html tags that define the property of any html tags. i.e.
-      width, height, controls, loops, input, and autoplay. These attributes also
-      help us to store information in meta tags by using name, content, and type
-      attributes. Html documents structured mentioned below:
+    <div class="container">
+      <h1>Document structure, tags, and semantics</h1>
+      <section>
+        <h2>Introduction</h2>
+        <p>
+          As we all know HTML is a language of the web. It’s used to design the
+          web pages or we can say structure the page layouts of a website. HTML
+          stands for HYPERTEXT MARKUP LANGUAGE, as its full form suggests it’s
+          not any programming language, a markup language. So, while the
+          execution of HTML code we can’t face any such error. In real HTML code
+          wasn’t compiled or interpreted because HTML code was rendered by the
+          browser. which is similar to the compilation of a program. Html
+          content is parched through the browser to display the content of HTML.
+        </p>
+        <h2>HTML document structure</h2>
+        <p>
+          Html used predefined tags and attributes to tell the browser how to
+          display content, means in which format, style, font size, and images
+          to display. Html is a case insensitive language. Case insensitive
+          means there is no difference in upper case and lower case ( capital
+          and small letters) both treated as the same, for r example ‘D’ and ‘d’
+          both are the same here. There are generally two types of tags in HTML:
+        </p>
+        <ul class="example">
+          <li>
+            Paired Tags: These tags come in pairs. That is they have both
+            opening(&lt; &gt) and closing(&lt;/ &gt) tags.
+          </li>
+          <li>Empty Tags: These tags do not require to be closed.</li>
+        </ul>
+        <p>
+          Below is an example of a &lt;b&gt; tag in HTML, which tells the
+          browser to bold the text inside it.
+        </p>
+        <img
+          src="https://cdn.discordapp.com/attachments/1102860047312224257/1179660491233173524/image.png?ex=657a9772&is=65682272&hm=e017df37e23920483f58fd54eee7226eced45412b1303ea9a39e7bf40b76cf35&"
+          target="_blank"
+        />
+      </section>
+      <section>
+        <p>
+          Tags and attributes: Tags are individuals of html structure, we have
+          to open and close any tag with a forward slash like this
+          &lt;h1&gt;&lt;/h1&gt;. There are some variations with the tag some of
+          them are self-closing tag which isn’t required to close and some are
+          empty tag where we can add any attributes in it. Attributes are
+          additional properties of html tags that define the property of any
+          html tags. i.e. width, height, controls, loops, input, and autoplay.
+          These attributes also help us to store information in meta tags by
+          using name, content, and type attributes. Html documents structured
+          mentioned below:
+        </p>
 
-      <h2>Structure of an HTML Document</h2>
-      <p>An HTML Document is mainly divided into two parts:</p>
-      <ul>
-        <li>
-          HEAD: This contains the information about the HTML document. For
-          Example, the Title of the page, version of HTML, Meta Data, etc.
-        </li>
-        <li>
-          BODY: This contains everything you want to display on the Web Page.
-        </li>
-      </ul>
-      <img
-        src="https://cdn.discordapp.com/attachments/1102860047312224257/1179662457191530646/image.png?ex=657a9946&is=65682446&hm=a377585971cb2e007f338dea88c0b996800dbdca66aa65a37b4da3d8ea83333b&"
-        target="_blank"
-      />
-      <p>
-        To know more about the structure and tags please refer to this
-        <a
-          href="https://www.geeksforgeeks.org/html-course-structure-of-an-html-document/"
+        <h2>Structure of an HTML Document</h2>
+        <p>An HTML Document is mainly divided into two parts:</p>
+        <ul class="example">
+          <li>
+            HEAD: This contains the information about the HTML document. For
+            Example, the Title of the page, version of HTML, Meta Data, etc.
+          </li>
+          <li>
+            BODY: This contains everything you want to display on the Web Page.
+          </li>
+        </ul>
+        <img
+          src="https://cdn.discordapp.com/attachments/1102860047312224257/1179662457191530646/image.png?ex=657a9946&is=65682446&hm=a377585971cb2e007f338dea88c0b996800dbdca66aa65a37b4da3d8ea83333b&"
           target="_blank"
-          >documentation</a
-        >
-        by Geeks for Geeks.
-      </p>
-    </section>
-    <section>
-      <h2>HTML Tags</h2>
-      <p>
-        HTML tags are the keywords that are used to produce web pages in various
-        formats. Opening tags and closing tags are found in the majority of
-        tags. The concluding tags contain a forward slash (/), while the
-        language of the beginning tags is the same. Certain tags don’t need to
-        be closed. Refer to this
-        <a
-          href="https://www.geeksforgeeks.org/html-tags-a-to-z-list/"
-          target="_blank"
-          >documentation</a
-        >
-        to know more about HTML tags.
-      </p>
-    </section>
-    <section>
-      <h2>Semantics</h2>
-      <p>
-        A semantic element clearly describes its meaning to both the browser and
-        the developer.
-      </p>
-      <p>
-        Some examples of semantic tags are:
-        <code>
-          &lt;form&gt;, &lt;table&gt;, &lt;article&gt;, &lt;section&gt;,
-          &lt;main&gt;, &lt;header&gt;, &lt;footer&gt;
-        </code>
-        , etc tag.
-      </p>
-      <p>
-        Please refer to this
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
-          target="_blank"
-          >documentation</a
-        >
-        by MDN to know more about semantics.
-      </p>
-    </section>
+        />
+        <p>
+          To know more about the structure and tags please refer to this
+          <a
+            href="https://www.geeksforgeeks.org/html-course-structure-of-an-html-document/"
+            target="_blank"
+            >documentation</a
+          >
+          by Geeks for Geeks.
+        </p>
+      </section>
+      <section>
+        <h2>HTML Tags</h2>
+        <p>
+          HTML tags are the keywords that are used to produce web pages in
+          various formats. Opening tags and closing tags are found in the
+          majority of tags. The concluding tags contain a forward slash (/),
+          while the language of the beginning tags is the same. Certain tags
+          don’t need to be closed. Refer to this
+          <a
+            href="https://www.geeksforgeeks.org/html-tags-a-to-z-list/"
+            target="_blank"
+            >documentation</a
+          >
+          to know more about HTML tags.
+        </p>
+      </section>
+      <section>
+        <h2>Semantics</h2>
+        <p>
+          A semantic element clearly describes its meaning to both the browser
+          and the developer.
+        </p>
+        <p>
+          Some examples of semantic tags are:
+          <code>
+            &lt;form&gt;, &lt;table&gt;, &lt;article&gt;, &lt;section&gt;,
+            &lt;main&gt;, &lt;header&gt;, &lt;footer&gt;
+          </code>
+          , etc tag.
+        </p>
+        <p>
+          Please refer to this
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+            target="_blank"
+            >documentation</a
+          >
+          by MDN to know more about semantics.
+        </p>
+      </section>
+    </div>
   </body>
 </html>
