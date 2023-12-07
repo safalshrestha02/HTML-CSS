@@ -12,15 +12,29 @@
 
 .main-container {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
   gap: 10px;
   justify-content: space-between;
 }
 
 .main-container div {
+  display: flex;
+  /* width: 20%; */
+}
+
+.inner-div {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.inner-div div {
   background-color: beige;
-  width: 500px;
-  padding: 30px;
+  text-align: center;
+  padding: 20px;
+  width: 20%;
+  /* border: 1px solid; */
 }
 
 .sub-container {

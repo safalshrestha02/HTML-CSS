@@ -1,0 +1,49 @@
+.header {
+  border: 1px solid;
+  padding: 20px;
+}
+
+.navigation {
+  border: 1px solid;
+  padding: 20px;
+}
+
+.main {
+  border: 1px solid;
+  padding: 20px;
+}
+
+.footer {
+  border: 1px solid;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inner-container {
+  display: flex;
+  gap: 10px;
+}
+
+.sidebar {
+  flex: 1;
+  border: 1px solid;
+  padding: 20px;
+}
+
+.ads {
+  flex: 1;
+  border: 1px solid;
+  padding: 20px;
+}
+
+.main-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
