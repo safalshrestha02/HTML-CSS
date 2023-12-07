@@ -91,3 +91,58 @@
 .box10 {
   background-color: rgb(178, 219, 255);
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-box3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box6 {
+    width: 100%;
+  }
+
+  .box7 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-box2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .box4 {
+    width: 100%;
+  }
+
+  .box5 {
+    width: 100%;
+  }
+
+  .inner-box5 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .box8 {
+    width: 100%;
+  }
+
+  .box9 {
+    width: 100%;
+  }
+}
